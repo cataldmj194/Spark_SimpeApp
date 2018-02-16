@@ -33,7 +33,8 @@ NOTES: Learned that Spark or maven does not play well with java9 just yet.
        local loopback (like I wanted) spark-submit will use an external ip 
        since spark thinks this is wrong. The following message is displayed:
 
-       18/02/15 15:41:06 WARN Utils: Your hostname, Laptop resolves to a loopback address: 127.0.1.1; using xxx.xxx.xxx.xxx instead (on interface "Interface_Name_Here")
+       18/02/15 15:41:06 WARN Utils: Your hostname, Laptop resolves to a loopback address: 
+       127.0.1.1; using xxx.xxx.xxx.xxx instead (on interface "Interface_Name_Here")
        18/02/15 15:41:06 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
 
        I probably just don't understand why spark needs the external 
@@ -44,7 +45,7 @@ NOTES: Learned that Spark or maven does not play well with java9 just yet.
        configurations through the command line, I.E:
 
        ./bin/spark-submit --name "My app" --master local[4] --conf spark.eventLog.enabled=false
-  --conf "spark.executor.extraJavaOptions=-XX:+PrintGCDetails -XX:+PrintGCTimeStamps" myApp.jar 
+       --conf "spark.executor.extraJavaOptions=-XX:+PrintGCDetails -XX:+PrintGCTimeStamps" myApp.jar 
 
 
        So I could have probably resolved my issue through the spark configs
