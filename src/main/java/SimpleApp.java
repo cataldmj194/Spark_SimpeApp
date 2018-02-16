@@ -7,8 +7,6 @@
 
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Dataset;
-import java.util.*;
-import java.io.*;
 
 public class SimpleApp {
   public static void main(String[] args){
